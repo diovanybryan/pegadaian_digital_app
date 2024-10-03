@@ -3,7 +3,7 @@ import 'package:logger/logger.dart';
 import 'package:pegadaian_digital/data/pegadaian_preferences.dart';
 import 'package:pegadaian_digital/injection.dart';
 
-class TasbihScreen extends StatefulWidget { // Ganti HomeScreen dengan TasbihScreen
+class TasbihScreen extends StatefulWidget {
   const TasbihScreen({super.key}); // Ganti constructor
 
   @override
@@ -53,9 +53,7 @@ class _TasbihScreenState extends State<TasbihScreen> { // Ganti State class
     });
   }
 
-  // Fungsi untuk mendapatkan string random
   String getRandomString() {
-    // Ganti dengan logika untuk mendapatkan string random dari daftar
     List<String> strings = [
   'Allahu Akbar الله أكبر Allah Maha Besar',
   'Astagfirullah أستغفر الله Aku memohon ampun kepada Allah',
@@ -74,8 +72,8 @@ class _TasbihScreenState extends State<TasbihScreen> { // Ganti State class
   'La ilaha illa anta subhanaka inni kuntu minaz zalimin لَا إِلَهَ إِلَّا أَنتَ سُبْحَانَكَ إِنِّي كُنتُ مِنَ الظَّالِمِينَ Tidak ada Tuhan selain Engkau, Maha Suci Engkau, sesungguhnya aku termasuk orang yang zalim',
   'Alhamdulillahi rabbil \'alamin الحمد لله رب العالمين Segala puji bagi Allah, Tuhan seluruh alam',
   'Ya Hayyu Ya Qayyum يَا حَيُّ يَا قَيُّومُ Wahai Yang Maha Hidup, Yang Maha Berdiri Sendiri'
-]; // Contoh daftar string
-    return (strings..shuffle()).first; // Mengacak dan mengambil string pertama
+];
+    return (strings..shuffle()).first;
   }
 
   Future<void> initLocal() async {
@@ -94,11 +92,11 @@ class _TasbihScreenState extends State<TasbihScreen> { // Ganti State class
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white, // Mengatur warna latar belakang menjadi putih
+      backgroundColor: Colors.white,
       appBar: AppBar(
-        backgroundColor: Colors.white, // Mengubah warna header menjadi putih
-        title: Text("Dzikir Digital", style: TextStyle(color: Colors.black)), // Mengubah warna teks judul menjadi hitam
-        iconTheme: IconThemeData(color: Colors.green), // Mengubah warna tombol back menjadi hijau
+        backgroundColor: Colors.white,
+        title: Text("Dzikir", style: TextStyle(color: Colors.black)),
+        iconTheme: IconThemeData(color: Colors.green),
       ),
       body: Stack( // Changed from Column to Stack
         children: [
@@ -160,7 +158,7 @@ class _TasbihScreenState extends State<TasbihScreen> { // Ganti State class
               onPressed: incrementCounter,
               tooltip: 'Increment',
               child: const Icon(Icons.add),
-              backgroundColor: Colors.blueAccent, // Change background color to blue accent
+              backgroundColor: Colors.green, // Mengubah warna tombol menjadi hijau
               elevation: 5, // Increase elevation
             ),
           ),
