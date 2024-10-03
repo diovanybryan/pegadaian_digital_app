@@ -33,9 +33,9 @@ class _HomeScreenState extends State<HomeScreen> {
     context.read<HomeBloc>().add(GetUserEvent());
     menu = [
       ("assets/images/svg/home.svg", "Beranda", homeBody()),
-      ("assets/images/svg/history.svg", "Riwayat", HistoryScreen()),
-      ("assets/images/svg/notification.svg", "Notifikasi", HistoryScreen()),
-      ("assets/images/svg/profile.svg", "Profile", HistoryScreen()),
+      ("assets/images/svg/history.svg", "Promo", HistoryScreen()),
+      ("assets/images/svg/history.svg", "Outlet", HistoryScreen()),
+      ("assets/images/svg/profile.svg", "Profil", HistoryScreen()),
     ];
   }
 

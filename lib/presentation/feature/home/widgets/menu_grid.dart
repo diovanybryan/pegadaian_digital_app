@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:pegadaian_digital/presentation/feature/attendance/attendance_screen.dart';
+import 'package:pegadaian_digital/presentation/feature/tasbih/tasbih_screen.dart';
 
 import '../../../../helpers/colors_custom.dart';
 
@@ -12,10 +14,10 @@ class MenuGrid extends StatefulWidget {
 
 class _MenuGridState extends State<MenuGrid> {
   List<(String image, String title)> menuList = [
-    ("assets/images/svg/pawn.svg", "Bayar Gadai"),
-    ("assets/images/svg/instalment.svg", "Bayar Cicilan"),
-    ("assets/images/svg/credit.svg", "Pulsa & Paket Data"),
-    ("assets/images/svg/gold_plus.svg", "Tab. Emas Plus"),
+    ("assets/images/svg/pawn.svg", "Doa Bepergian"),
+    ("assets/images/svg/instalment.svg", "Dzikir"),
+    ("assets/images/svg/credit.svg", "Nonton"),
+    ("assets/images/svg/gold_plus.svg", "Permainan"),
     ("assets/images/svg/booking.svg", "Booking Service"),
     ("assets/images/svg/pln.svg", "Listrik (PLN)"),
     ("assets/images/svg/gold_bar.svg", "Cicilan Emas Batangan"),
@@ -36,7 +38,15 @@ class _MenuGridState extends State<MenuGrid> {
               crossAxisSpacing: 5),
           itemCount: menuList.length,
           itemBuilder: (context, index) {
-            return Container(
+            return GestureDetector( // {{ edit_1 }}
+              onTap: () {
+                if (index == 0) { // Doa Bepergian
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => AttendanceScreen())); // {{ edit_1 }}
+                } else if (index == 1) { // Dzikir
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => TasbihScreen())); // {{ edit_1 }}
+                }
+              },
+              child: Container(
                 width: 60,
                 height: 80,
                 padding: EdgeInsets.symmetric(horizontal: 5),
@@ -53,7 +63,9 @@ class _MenuGridState extends State<MenuGrid> {
                           color: ColorsCustom.black),
                     ),
                   ],
-                ));
+                ),
+              ),
+            );
           }),
     );
   }
