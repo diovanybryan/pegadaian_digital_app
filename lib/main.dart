@@ -91,7 +91,7 @@ class _MainAppState extends State<MainApp> {
                 builder: (_) {
                   return const Scaffold(
                     body: Center(
-                      child: Text('Halaman Tidak Ditemukan'),
+                      child: Text('Mohon Maaf, Fitur ini sedang dikembangkan'),
                     ),
                   );
                 },

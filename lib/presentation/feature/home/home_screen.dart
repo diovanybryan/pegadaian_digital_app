@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:pegadaian_digital/helpers/colors_custom.dart';
 import 'package:pegadaian_digital/presentation/feature/history/history_screen.dart';
+import 'package:pegadaian_digital/presentation/feature/logout/logout_screen.dart';
 import 'package:pegadaian_digital/presentation/feature/home/bloc/home_bloc.dart';
 import 'package:pegadaian_digital/presentation/feature/home/widgets/custom_bottom_nav.dart';
 import 'package:pegadaian_digital/presentation/feature/home/widgets/gold_menu.dart';
@@ -35,7 +36,7 @@ class _HomeScreenState extends State<HomeScreen> {
       ("assets/images/svg/home.svg", "Beranda", homeBody()),
       ("assets/images/svg/history.svg", "Promo", HistoryScreen()),
       ("assets/images/svg/history.svg", "Outlet", HistoryScreen()),
-      ("assets/images/svg/profile.svg", "Profil", HistoryScreen()),
+      ("assets/images/svg/profile.svg", "Keluar", LogoutScreen()),
     ];
   }
 

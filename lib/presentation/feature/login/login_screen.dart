@@ -35,7 +35,7 @@ class _LoginScreenState extends State<LoginScreen> {
   BuildContext? _dialogContext;
 
   static const successSnackbar = SnackBar(
-    content: Text('Berhasil Login'),
+    content: Text('Selamat Datang'),
   );
 
   static const failedSnackbar = SnackBar(
