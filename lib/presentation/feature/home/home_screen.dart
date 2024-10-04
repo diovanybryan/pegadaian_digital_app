@@ -49,11 +49,11 @@ class _HomeScreenState extends State<HomeScreen> {
         onTap: onItemTapped,
       ),
       floatingActionButton: FloatingActionButton(
-        backgroundColor: ColorsCustom.blue,
+        backgroundColor: ColorsCustom.green,
         onPressed: () {
-          Navigator.pushNamed(context, Routes.ATTENDANCE);
+          Navigator.pushNamed(context, Routes.CALL);
         },
-        child: Icon(Icons.calendar_month_outlined, color: ColorsCustom.white),
+        child: Icon(Icons.call, color: ColorsCustom.white), // Changed from calendar_month_outlined to call
       ),
     );
   }
