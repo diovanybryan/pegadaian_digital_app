@@ -14,23 +14,31 @@ class _SahabatScreenState extends State<SahabatScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Sahabat Screen'),
+        title: Text('Pesan Makanan'),
       ),
       body: AnimatedContainer(
         duration: Duration(milliseconds: 500),
         child: SingleChildScrollView(
           child: Column(
             children: [
-              // Your content here
-              Padding(
-                padding: const EdgeInsets.all(8.0), // Padding 2x2
-                child: Text('Artikel 1: Informasi penting tentang Sahabat.'),
+              ListView.builder(
+                shrinkWrap: true,
+                physics: NeverScrollableScrollPhysics(),
+                itemCount: 10, // Ganti dengan jumlah makanan yang sesuai
+                itemBuilder: (context, index) {
+                  return Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Column( // Changed to Column to include more details
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text('Makanan ${index + 1}: Deskripsi makanan ${index + 1}.'),
+                        Text('Harga: \$${(index + 1) * 5}', // Example price
+                            style: TextStyle(fontWeight: FontWeight.bold)),
+                      ],
+                    ),
+                  );
+                },
               ),
-              Padding(
-                padding: const EdgeInsets.all(8.0), // Padding 2x2
-                child: Text('Artikel 2: Tips dan trik untuk menggunakan Sahabat.'),
-              ),
-              // ... existing content ...
             ],
           ),
         ),

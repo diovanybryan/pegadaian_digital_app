@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:pegadaian_digital/presentation/feature/attendance/attendance_screen.dart';
+import 'package:pegadaian_digital/presentation/feature/makanan/cart_page.dart';
 import 'package:pegadaian_digital/presentation/feature/tasbih/tasbih_screen.dart';
 import 'package:pegadaian_digital/presentation/feature/sahabat/sahabat_screen.dart';
+import 'package:pegadaian_digital/presentation/feature/makanan/home_page.dart';
 import 'package:pegadaian_digital/presentation/feature/maintenance/maintenance_screen.dart';
 import '../../../../helpers/colors_custom.dart';
 
@@ -46,7 +48,7 @@ class _MenuGridState extends State<MenuGrid> {
                 } else if (index == 1) { // Dzikir
                   Navigator.push(context, MaterialPageRoute(builder: (context) => TasbihScreen())); // {{ edit_1 }}
                 } else if (index == 2) { // Dzikir
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => SahabatScreen())); // {{ edit_1 }}
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => CartPage())); // {{ edit_1 }}
                 } else {
                   Navigator.push(context, MaterialPageRoute(builder: (context) => MaintenanceScreen())); // {{ edit_1 }}
                 }

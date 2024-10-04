@@ -7,4 +7,6 @@ class Routes {
   static const HOME = '/home';
   static const ATTENDANCE = '/attendance';
   static const CALL = '/call';
+  static String homeDetailRoute = "/detail";
+  static String cartPage = "/cart";  
 }
